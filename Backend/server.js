@@ -7,8 +7,15 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Middleware
-app.use(cors());
 app.use(bodyParser.json());
+
+// CORS configuration
+const corsOptions = {
+    origin: 'https://interviewer-dashboard.vercel.app', // Replace with your frontend's URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect("mongodb+srv://db:db1@cluster0.h3odo.mongodb.net/registration?retryWrites=true&w=majority&appName=Cluster0", {
