@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // CORS configuration
 const corsOptions = {
-    origin: 'https://interviewer-dashboard.vercel.app', // Replace with your frontend's URL
+    origin: 'https://gtc-interviewer-dashboard.vercel.app', // Replace with your frontend's URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 };
